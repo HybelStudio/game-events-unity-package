@@ -12,6 +12,6 @@ namespace Hybel.GameEvents
 
         private void OnDestroy() => gameEvent -= this;
 
-        public virtual void RaiseEvent(AnimationCurve curve) => unityEvent?.Invoke(curve);
+        public virtual void EventRaised(AnimationCurve curve) => unityEvent?.Invoke(curve);
     }
 }

@@ -12,6 +12,6 @@ namespace Hybel.GameEvents
 
         private void OnDestroy() => gameEvent -= this;
 
-        public virtual void RaiseEvent(Gradient gradient) => unityEvent?.Invoke(gradient);
+        public virtual void EventRaised(Gradient gradient) => unityEvent?.Invoke(gradient);
     }
 }

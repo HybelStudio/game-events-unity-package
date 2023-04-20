@@ -7,7 +7,7 @@ namespace Hybel.GameEvents
     {
         [SerializeField, Min(0f)] protected float delay;
 
-        public override void RaiseEvent(BoundsInt bounds) => DelayEvent(bounds);
+        public override void EventRaised(BoundsInt bounds) => DelayEvent(bounds);
 
         private async void DelayEvent(BoundsInt bounds)
         {

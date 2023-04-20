@@ -9,7 +9,7 @@ namespace Hybel.GameEvents
         [SerializeField] protected int periods;
         [SerializeField, Min(0f)] protected float delay;
 
-        public override void RaiseEvent(Bounds bounds) => FireEventPeriodically(bounds);
+        public override void EventRaised(Bounds bounds) => FireEventPeriodically(bounds);
 
         private async void FireEventPeriodically(Bounds bounds)
         {

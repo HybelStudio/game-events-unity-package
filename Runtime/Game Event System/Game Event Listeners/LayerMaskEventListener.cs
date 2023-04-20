@@ -12,6 +12,6 @@ namespace Hybel.GameEvents
 
         private void OnDestroy() => gameEvent -= this;
 
-        public virtual void RaiseEvent(LayerMask layerMask) => unityEvent?.Invoke(layerMask);
+        public virtual void EventRaised(LayerMask layerMask) => unityEvent?.Invoke(layerMask);
     }
 }

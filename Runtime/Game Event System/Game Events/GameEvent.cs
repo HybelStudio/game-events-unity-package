@@ -13,7 +13,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke()
         {
             foreach (IGameEventListener listener in _gameEventListeners)
-                listener.RaiseEvent();
+                listener.EventRaised();
 
             foreach (Action actionListener in _actionListeners)
                 actionListener?.Invoke();

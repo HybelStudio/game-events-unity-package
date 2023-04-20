@@ -9,7 +9,7 @@ namespace Hybel.GameEvents
         [SerializeField, Min(0f)] protected float timeBetweenEvents;
         [SerializeField] protected UnityEvent<Gradient> delayedEvent;
 
-        public override void RaiseEvent(Gradient gradient)
+        public override void EventRaised(Gradient gradient)
         {
             unityEvent?.Invoke(gradient);
             DelayEvent(gradient);

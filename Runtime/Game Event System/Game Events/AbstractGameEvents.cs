@@ -12,7 +12,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T arg)
         {
             foreach (IGameEventListener<T> listener in _gameEventListeners)
-                listener.RaiseEvent(arg);
+                listener.EventRaised(arg);
 
             foreach (Action<T> actionListener in _actionListeners)
                 actionListener?.Invoke(arg);
@@ -57,7 +57,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2)
         {
             foreach (IGameEventListener<T1, T2> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2);
+                listener.EventRaised(arg1, arg2);
 
             foreach (Action<T1, T2> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2);
@@ -102,7 +102,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3)
         {
             foreach (IGameEventListener<T1, T2, T3> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3);
+                listener.EventRaised(arg1, arg2, arg3);
 
             foreach (Action<T1, T2, T3> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3);
@@ -147,7 +147,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4)
         {
             foreach (IGameEventListener<T1, T2, T3, T4> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3, arg4);
+                listener.EventRaised(arg1, arg2, arg3, arg4);
 
             foreach (Action<T1, T2, T3, T4> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3, arg4);
@@ -192,7 +192,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5)
         {
             foreach (IGameEventListener<T1, T2, T3, T4, T5> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3, arg4, arg5);
+                listener.EventRaised(arg1, arg2, arg3, arg4, arg5);
 
             foreach (Action<T1, T2, T3, T4, T5> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3, arg4, arg5);
@@ -237,7 +237,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6)
         {
             foreach (IGameEventListener<T1, T2, T3, T4, T5, T6> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3, arg4, arg5, arg6);
+                listener.EventRaised(arg1, arg2, arg3, arg4, arg5, arg6);
 
             foreach (Action<T1, T2, T3, T4, T5, T6> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3, arg4, arg5, arg6);
@@ -282,7 +282,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
         {
             foreach (IGameEventListener<T1, T2, T3, T4, T5, T6, T7> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
+                listener.EventRaised(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 
             foreach (Action<T1, T2, T3, T4, T5, T6, T7> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -327,7 +327,7 @@ namespace Hybel.GameEvents
         public virtual void Invoke(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8)
         {
             foreach (IGameEventListener<T1, T2, T3, T4, T5, T6, T7, T8> listener in _gameEventListeners)
-                listener.RaiseEvent(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
+                listener.EventRaised(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 
             foreach (Action<T1, T2, T3, T4, T5, T6, T7, T8> actionListener in _actionListeners)
                 actionListener?.Invoke(arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

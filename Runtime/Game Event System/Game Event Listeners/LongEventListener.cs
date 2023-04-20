@@ -12,6 +12,6 @@ namespace Hybel.GameEvents
 
         private void OnDestroy() => gameEvent -= this;
 
-        public virtual void RaiseEvent(long value) => unityEvent?.Invoke(value);
+        public virtual void EventRaised(long value) => unityEvent?.Invoke(value);
     }
 }

@@ -7,7 +7,7 @@ namespace Hybel.GameEvents
     {
         [SerializeField, Min(0f)] protected float delay;
 
-        public override void RaiseEvent(Gradient gradient) => DelayEvent(gradient);
+        public override void EventRaised(Gradient gradient) => DelayEvent(gradient);
 
         private async void DelayEvent(Gradient gradient)
         {

@@ -9,7 +9,7 @@ namespace Hybel.GameEvents
         [SerializeField, Min(0f)] protected float timeBetweenEvents;
         [SerializeField] protected UnityEvent<LayerMask> delayedEvent;
 
-        public override void RaiseEvent(LayerMask layerMask)
+        public override void EventRaised(LayerMask layerMask)
         {
             unityEvent?.Invoke(layerMask);
             DelayEvent(layerMask);

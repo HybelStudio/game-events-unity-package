@@ -9,7 +9,7 @@ namespace Hybel.GameEvents
         [SerializeField, Min(0f)] protected float timeBetweenEvents;
         [SerializeField] protected UnityEvent<Vector2Int> delayedEvent;
 
-        public override void RaiseEvent(Vector2Int vector)
+        public override void EventRaised(Vector2Int vector)
         {
             unityEvent?.Invoke(vector);
             DelayEvent(vector);
