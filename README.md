@@ -12,8 +12,8 @@ To create a new Game Event, in your Project view, right click and navigate to "C
 
 There are a few helpful components you can use to convert a Game Event into a Unity Event. They all have "EventListener" in their name. The basic one is the GameEventListener. After adding that component to an object you can assign the Game Event you created in the inspector as long as the listener is the same type as the event itsef. Then you can use the unity event as normal to invoke functions on your other components.
 
-To invoke the Game Event you will need to write some code.
-Create a new C# Script from the create menu:
+To invoke the Game Event you will need to write some code.\
+Create a new C# Script from the create menu and make a field with GameEvent type:
 ```csharp
 public class GameEventTest : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class GameEventTest : MonoBehaviour
 
 Then anywhere in your code you can invoke the event by calling the Invoke() method on the GameEvent.
 
-```
+```csharp
 public class GameEventTest : MonoBehaviour
 {
     [SerializeField] private GameEvent gameEvent;
@@ -63,9 +63,24 @@ public class GameEventListeningTest : MonoBehaviour
 
 Note that i'm using the '+=' and '-=' operators here. This is similar to how C# events work, but you can use the `Subscribe()` and `Unsubscribe()` methods instead if you prefer.
 
+## Caveats
+
+* Unlike C# events, these events can easily be invoked from anywhere in your project. This is working as intended since you might use the same event in different scenes. However if you have multiple objects invoking it you might get unintended behaviour.
+* Game-Wide, but not actually. The events, once invoked will broadcast to anything that is subscribed, however unloaded objects, *obviously* arent subscribed and therefor wont be notified when the event is raised. This means you can't have an event fire in one scene and a door be opened in another scene (which is current unloaded) just by using this system. You'd have to write some logic to store the state of that door between scenes and have that logic be called when the event is raised.
+
 ## Contributing
 
-Pull requests are welcome.
+**Bug Reports & Feature Requests**
+
+Please use the [issue tracker](https://github.com/HybelStudio/game-events-unity-package/issues) to report bugs or file features.
+
+Pull requests are welcome. To begin developing, do this under the assets folder of a Unity project.
+
+```bash
+Assets>git clone https://github.com/HybelStudio/game-events-unity-package.git\
+```
+
+Then open your Unity project and start developing :D
 
 ## License
 
