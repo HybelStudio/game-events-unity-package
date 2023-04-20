@@ -1,0 +1,18 @@
+{
+    "name": "Hybel.GameEvents.Editor",
+    "rootNamespace": "Hybel.GameEvents.Editor",
+    "references": [
+        "GUID:4b5730bb7cf6d2942a1476f893fd6faa"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
