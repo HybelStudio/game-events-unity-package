@@ -76,7 +76,7 @@ Please use the [issue tracker](https://github.com/HybelStudio/game-events-unity-
 
 Pull requests are welcome. To begin developing, do this under the assets folder of a Unity project.
 
-```bash
+```sh
 Assets>git clone https://github.com/HybelStudio/game-events-unity-package.git\
 ```
 
