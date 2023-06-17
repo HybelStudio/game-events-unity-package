@@ -1,7 +1,9 @@
 {
     "name": "Hybel.GameEvents",
     "rootNamespace": "Hybel.GameEvents",
-    "references": [],
+    "references": [
+        "GUID:1a2c454f1174a9b4d83780d531d373e6"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
